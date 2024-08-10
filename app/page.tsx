@@ -6,7 +6,7 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     maxToolRoundtrips: 2,
   });
-  
+
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
       <div className="space-y-4">
@@ -23,7 +23,6 @@ export default function Chat() {
                   </span>
                 )}
               </p>              
-              <p>{m.content}</p>
             </div>
           </div>
         ))}
