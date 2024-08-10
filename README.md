@@ -1,8 +1,37 @@
-# Vercel AI SDK RAG Guide Starter Project
+# Rag Starter
 
-This is the starter project for the Vercel AI SDK [Retrieval-Augmented Generation (RAG) guide](https://sdk.vercel.ai/docs/guides/rag-chatbot).
+This is the completed version of the project in [Retrieval-Augmented Generation (RAG) guide](https://sdk.vercel.ai/docs/guides/rag-chatbot).
 
-In this project, you will build a chatbot that will only respond with information that it has within its knowledge base. The chatbot will be able to both store and retrieve information. This project has many interesting use cases from customer support through to building your own second brain!
+## pre-requisites
+
+Setup the postgresql database with pgvector plugin using docker-compose
+```bash
+docker-compose up
+```
+
+Setup NVM and the node version
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+NODE_VERSION=$(cat .nvmrc)
+nvm install "$NODE_VERSION"
+nvm alias default "$NODE_VERSION"
+nvm use "$NODE_VERSION"
+```
+
+Setup the environment variables
+```bash
+cp .env.example .env
+# then add your OPENAI_API_KEY to the .env file
+```
+
+Next - install the deps and start the app.
+```bash
+pnpm i
+pnpm dev
+```
+
+## stack
 
 This project will use the following stack:
 
